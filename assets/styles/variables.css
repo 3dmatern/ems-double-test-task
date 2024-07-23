@@ -1,0 +1,15 @@
+:root {
+    --white-color: #FFFFFF;
+
+    /* Background */
+    --bg-color: #F0F4FC;
+    --bg-variant-color: #EBF0FA;
+
+    /* Typography */
+    --title-color: #1F4284;
+    --description-color: #727272;
+
+    /* Form */
+    --btn-bg-color: #244C98;
+    --btn-bg-hover-color: #2e63c5;
+}
