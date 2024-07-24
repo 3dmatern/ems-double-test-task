@@ -9,6 +9,19 @@ module.exports = {
         filename: "index.[contenthash:8].js",
         clean: true
     },
+    module: {
+        rules: [
+            {
+                test: /\.js$/,
+                use: "babel-loader",
+                exclude: /node_modules/
+            },
+            {
+                test: /\.css$/,
+                use: ["style-loader", "css-loader", "postcss-loader"]
+            }
+        ]
+    },
     plugins: [
         new HtmlWebpackPlugin({
             template: path.join(__dirname, "src", "template.html"),
