@@ -1,21 +1,29 @@
-import path from "path";
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const FileManagerPlugin = require("filemanager-webpack-plugin");
 
-export default {
-    entry: "./src/index.ts",
-    module: {
-        rules: [
-            {
-                test: /\.ts$/,
-                use: "ts-loader",
-                exclude: /node_modules/
-            }
-        ]
-    },
-    resolve: {
-        extensions: [".ts", ".js"]
-    },
+module.exports = {
+    entry: path.join(__dirname, "src", "index.js"),
     output: {
-        filename: "bundle.js",
-        path: path.resolve(__dirname, "dist")
+        path: path.join(__dirname, "dist"),
+        filename: "index.[contenthash:8].js",
+        clean: true
+    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: path.join(__dirname, "src", "template.html"),
+            filename: "index.html"
+        }),
+        new FileManagerPlugin({
+            events: {
+                onStart: {
+                delete: ['dist']
+                }
+            }
+        })
+    ],
+    devServer: {
+        watchFiles: path.join(__dirname, "src"),
+        port: 2701
     }
 };
