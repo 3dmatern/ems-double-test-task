@@ -269,6 +269,8 @@ button {
 
     .preview {
         min-height: 220px;
+        max-width: 910px;
+        max-height: 456px;
     }
 }
 
@@ -314,8 +316,6 @@ button {
     .preview {
         width: 50%;
         height: 100%;
-        max-width: 910px;
-        max-height: 456px;
         border-top-right-radius: 10px;
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 10px;
