@@ -10,6 +10,15 @@
     --description-color: #727272;
 
     /* Form */
-    --btn-bg-color: #244C98;
-    --btn-bg-hover-color: #2e63c5;
+    --form-color: #323232;
+    --form-blue-color: #244C98;
+    --form-recover-hover-color: #2e63c5;
+    --form-input-color: #1F4284;
+    --form-input-bg-color: #D7E2F6;
+    --form-btn-bg-color: #244C98;
+    --form-btn-bg-hover-color: #2e63c5;
+    --form-btn-border-color: #244C98;
+
+    /* Modal */
+    --modal-btn-close-hover-color: #e6e6e6;
 }

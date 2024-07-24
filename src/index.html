@@ -21,7 +21,7 @@
                     знания и накопленный опыт мы можем предложить
                 </p>
 
-                <button class="info__btn">
+                <button id="trigger-open-modal" class="info__btn">
                     Попробовать бесплатно
                     <span class="info__btn_arrow">
                         <img src="./arrow-up-right.svg" alt="arrow-up-right">
@@ -31,5 +31,15 @@
 
             <img class="preview" src="./preview.png" alt="preview">
         </main>
+
+        <div id="modal" class="modal">
+            <div id="modal-content" class="modal__content">
+                <div class="modal__close">
+                    <button id="trigger-close-modal" class="modal__close_btn" type="button">
+                        <img src="./close.svg" alt="Закрыть" >
+                    </button>
+                </div>
+            </div>
+        </div>
     </body>
 </html>

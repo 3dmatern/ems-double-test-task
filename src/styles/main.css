@@ -15,6 +15,11 @@ body {
     min-width: 375px;
 }
 
+button {
+    border: none;
+    outline: none;
+}
+
 .container {
     margin: 14px 24px;
 
@@ -62,17 +67,15 @@ body {
     font-weight: 500;
     line-height: 24px;
 
-    border: none;
     border-radius: 60px;
-    outline: none;
-    background: var(--btn-bg-color);
+    background: var(--form-btn-bg-color);
 
     cursor: pointer;
 }
 
 .info__btn:hover,
 .info__btn:active {
-    background: var(--btn-bg-hover-color);
+    background: var(--form-btn-bg-hover-color);
 }
 
 .info__btn_arrow {
@@ -90,9 +93,155 @@ body {
 
 .preview {
     width: 100%;
+    min-height: 220px;
     display: block;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+}
+
+.modal {
+    width: 100%;
+    height: 100%;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+
+    backdrop-filter: blur(3px);
+}
+
+.modal__content {
+    width: 100%;
+    max-width: 500px;
+    padding: 24px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background: var(--bg-color);
+}
+
+.modal__close {
+    width: 100%;
+}
+
+.modal__close_btn {
+    width: 52px;
+    height: 52px;
+    margin-left: auto;
+    padding: 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--white-color);
+    border-radius: 10px;
+
+    cursor: pointer;
+}
+.modal__close_btn:hover,
+.modal__close_btn:active {
+    background: var(--modal-btn-close-hover-color);
+}
+
+.form {
+    width: 100%;
+}
+
+.form__title {
+    color: var(--form-color);
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 33px;
+}
+
+.form__input {
+    padding: 24px;
+    width: 100%;
+
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24.59px;
+
+    background: var(--form-input-bg-color);
+    border: none;
+    border-radius: 10px;
+}
+.form__input::placeholder {
+    color: var(--form-input-color);
+    font-family: Manrope;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24.59px;
+}
+
+.form__save-password {
+    margin-top: 24px;
+
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    color: var(--form-color);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.form__recover {
+    width: fit-content;
+    margin-top: 24px;
+
+    display: block;
+
+    color: var(--form-blue-color);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 27px;
+    text-decoration: none;
+}
+.form__recover:hover,
+.form__recover:active {
+    color: var(--form-recover-hover-color);
+}
+
+.form__btn {
+    width: 100%;
+    padding: 18px 12px;
+
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28.8px;
+
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form__submit {
+    color: var(--white-color);
+    background: var(--form-btn-bg-color);
+}
+.form__submit:hover,
+.form__submit:active {
+    background: var(--form-btn-bg-hover-color);
+}
+
+.form__register {
+    color: var(--form-blue-color);
+    border: 1px solid var(--form-btn-border-color);
+    background: var(--white-color);
+}
+.form__register:hover,
+.form__register:active {
+    color: var(--white-color);
+    background: var(--form-btn-bg-color);
 }
 
 @media (min-width: 768px) {
@@ -115,6 +264,10 @@ body {
 
     .info__btn {
         gap: 19px;
+    }
+
+    .preview {
+        min-height: 220px;
     }
 }
 
@@ -159,6 +312,9 @@ body {
 
     .preview {
         width: 50%;
+        height: 100%;
+        max-width: 910px;
+        max-height: 456px;
         border-top-right-radius: 10px;
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 10px;
