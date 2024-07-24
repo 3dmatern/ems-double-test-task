@@ -24,7 +24,8 @@ function createSignInForm (): HTMLFormElement {
     form.classList.add("form");
     form.addEventListener("submit", (e) => {
         e.preventDefault();
-        console.log(e.target);
+        // здесь можно добавит логику обработки формы.
+        console.log("Отправил");
     });
 
     const formTitle = document.createElement("h2");
